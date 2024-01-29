@@ -12,7 +12,7 @@ const Stopwatch: React.FC<StopwatchProps> = ({ time }) => {
         return `${minutes}:${seconds}:${milliseconds}`;
     };
 
-    return <div>{formatTime(time)}</div>;
+    return <div data-testid="stopwatch">{formatTime(time)}</div>;
 }
 
 export default Stopwatch;
