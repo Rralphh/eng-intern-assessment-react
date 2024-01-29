@@ -41,7 +41,7 @@ export default function App() {
         onLap={handleLap}
         running={isRunning}
       />
-      {laps.length > 0 && (
+      {laps.length > 0 && ( // when lap button is pressed at least once display laps
         <ul className="laps">
           {laps.map((lap, index) => (
             <li key={index} className="lap">
