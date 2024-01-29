@@ -1,18 +1,18 @@
-import React from 'react';
+import React from "react";
 
 interface StopwatchProps {
-    time: number;
+  time: number;
 }
 
 const Stopwatch: React.FC<StopwatchProps> = ({ time }) => {
-    const formatTime = (time: number): string => {
-        const milliseconds = `0${Math.floor(time / 10) % 100}`.slice(-2);
-        const seconds = `0${Math.floor(time / 1000) % 60}`.slice(-2);
-        const minutes = `0${Math.floor(time / 60000) % 60}`.slice(-2);
-        return `${minutes}:${seconds}:${milliseconds}`;
-    };
+  const formatTime = (time: number): string => {
+    const milliseconds = `0${Math.floor(time / 10) % 100}`.slice(-2);
+    const seconds = `0${Math.floor(time / 1000) % 60}`.slice(-2);
+    const minutes = `0${Math.floor(time / 60000) % 60}`.slice(-2);
+    return `${minutes}:${seconds}:${milliseconds}`;
+  };
 
-    return <div data-testid="stopwatch">{formatTime(time)}</div>;
-}
+  return <div data-testid="stopwatch">{formatTime(time)}</div>;
+};
 
 export default Stopwatch;
